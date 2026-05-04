@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+#header h1 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+}
+
+.mode-toggle button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-left: var(--spacing-xs);
+  cursor: pointer;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.mode-toggle button:hover {
+  background: var(--color-border);
+}
+
+.mode-toggle button[aria-pressed="true"] {
+  background: var(--color-primary);
+  color: white;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+#config-mode #editor-container {
+  display: block;
+}
+
+#preview-mode #editor-container {
+  display: none;
+}
+
+#config-mode #content-input {
+  display: none;
+}
+
+.config {
+  display: block;
+}
+
+.preview {
+  display: none;
+}
+
+.panel {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow: auto;
+}
+
+#editor-container {
+  border-right: 1px solid var(--color-border);
+}
+
+#content-input {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  resize: none;
+}
+
+#content-input:focus {
+  border-color: var(--color-primary);
+}
+
+#output {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-md);
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+#export-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  cursor: pointer;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+#export-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+#export-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
