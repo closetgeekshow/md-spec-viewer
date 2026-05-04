@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docsify Artifact Visualizer</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/config-ui.css">
+  <link rel="stylesheet" href="/styles/renderers.css">
+</head>
+<body class="config">
+  <div id="app">
+    <header id="header">
+      <h1>Artifact Visualizer</h1>
+      <nav class="mode-toggle" aria-label="Mode navigation">
+        <button id="config-mode" data-mode="config" aria-pressed="true">Config</button>
+        <button id="preview-mode" data-mode="preview" aria-pressed="false">Preview</button>
+      </nav>
+    </header>
+    <main id="main">
+      <div id="editor-container" class="panel" role="region" aria-label="Editor panel">
+        <textarea id="content-input" placeholder="Enter markdown content..." aria-label="Markdown content editor"></textarea>
+      </div>
+      <div id="preview-container" class="panel" role="region" aria-label="Preview panel">
+        <div id="output" aria-live="polite"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <button id="export-btn" aria-label="Export current configuration">Export</button>
+      <span id="status" role="status" aria-live="polite"></span>
+    </footer>
+  </div>
+  <script type="module" src="/src/shell.js"></script>
+  <script type="module" src="/src/import.js"></script>
+  <script type="module" src="/src/preview.js"></script>
+  <script type="module" src="/src/config-ui.js"></script>
+  <script type="module" src="/src/export.js"></script>
+  <!-- APP_SOURCE will be injected at build time -->
+</body>
+</html>

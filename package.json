@@ -1,0 +1,16 @@
+{
+  "name": "docsify-artifact-visualizer",
+  "version": "1.0.0",
+  "description": "Visualizes Docsify artifacts in multiple render modes",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-singlefile": "^2.0.0"
+  },
+  "target": "ES2020"
+}
